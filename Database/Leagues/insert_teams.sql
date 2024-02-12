@@ -1,0 +1,20 @@
+-- Add Liga-Mx Teams
+INSERT INTO teams (team_id, team_name, fbref_url, league_id) VALUES
+    ('18d3c3a3', 'América', '/en/squads/18d3c3a3/America-Stats', 31),
+    ('dd5ca9bd', 'Monterrey', '/en/squads/dd5ca9bd/Monterrey-Stats', 31),
+    ('d9e1bd51', 'UANL', '/en/squads/d9e1bd51/UANL-Stats', 31),
+    ('c9d59c6c', 'UNAM', '/en/squads/c9d59c6c/Pumas-UNAM-Stats', 31),
+    ('c02b0f7a', 'Guadalajara', '/en/squads/c02b0f7a/Guadalajara-Stats', 31),
+    ('73fd2313', 'Puebla', '/en/squads/73fd2313/Puebla-Stats', 31),
+    ('5d274ee4', 'Atlético', '/en/squads/5d274ee4/Atletico-Stats', 31),
+    ('fd7dad55', 'León', '/en/squads/fd7dad55/Leon-Stats', 31),
+    ('03b65ba9', 'Santos', '/en/squads/03b65ba9/Santos-Laguna-Stats', 31),
+    ('f0297c23', 'Mazatlán', '/en/squads/f0297c23/Mazatlan-Stats', 31),
+    ('1be8d2e3', 'Pachuca', '/en/squads/1be8d2e3/Pachuca-Stats', 31),
+    ('44b88a4e', 'Toluca', '/en/squads/44b88a4e/Toluca-Stats', 31),
+    ('a42ddf2f', 'Tijuana', '/en/squads/a42ddf2f/Tijuana-Stats', 31),
+    ('c3352ce7', 'Querétaro', '/en/squads/c3352ce7/Queretaro-Stats', 31),
+    ('29bff345', 'FC Juárez', '/en/squads/29bff345/FC-Juarez-Stats', 31),
+    ('632f1838', 'Cruz Azul', '/en/squads/632f1838/Cruz-Azul-Stats', 31),
+    ('7c76bc53', 'Atlas', '/en/squads/7c76bc53/Atlas-Stats', 31),
+    ('752db496', 'Necaxa', '/en/squads/752db496/Necaxa-Stats', 31);

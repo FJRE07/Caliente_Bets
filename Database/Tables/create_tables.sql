@@ -1,30 +1,29 @@
 CREATE TABLE leagues (
     league_id SERIAL PRIMARY KEY,
-    league_name VARCHAR(255) NOT NULL,
-    country VARCHAR(255),
-    description TEXT,
-    logo_url VARCHAR(255)
+    league_name VARCHAR(20) NOT NULL,
+    country VARCHAR(20),
+    last_season INT,
+    fbref_name VARCHAR(50),
+    fbref_url VARCHAR(255)
 );
 
 CREATE TABLE teams (
-    team_id SERIAL PRIMARY KEY,
-    team_name VARCHAR(255) NOT NULL,
+    team_id VARCHAR(10) PRIMARY KEY,
+    team_name VARCHAR(20) NOT NULL,
     league_id INT REFERENCES leagues(league_id),
-    logo_url VARCHAR(255)
+    fbref_url VARCHAR(255) 
 );
 
 CREATE TABLE matches (
-    match_id SERIAL PRIMARY KEY,
+    match_id VARCHAR(10) PRIMARY KEY,
     league_id INT REFERENCES leagues(league_id),
-    home_team_id INT REFERENCES teams(team_id),
-    away_team_id INT REFERENCES teams(team_id),
+    home_team_id VARCHAR(10) REFERENCES teams(team_id),
+    away_team_id VARCHAR(10) REFERENCES teams(team_id),
+    round VARCHAR(100),
+    week INT,
+    day VARCHAR(4),
     match_date DATE,
-    match_time TIME,
-    location VARCHAR(255),
-    result VARCHAR(50),
-    home_team_goals INT,
-    away_team_goals INT,
-    match_status VARCHAR(50)
+    match_time TIME
 );
 
 CREATE TABLE players (
