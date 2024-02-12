@@ -1,0 +1,7 @@
+Logos
+Leagues
+https://cdn.ssref.net/req/202312151/tlogo/fb/31.png
+Teams
+https://cdn.ssref.net/req/202312151/tlogo/fb/5d274ee4.png
+
+https://cdn.ssref.net/req/202312151/tlogo/fb/ + fbref_id + .png
