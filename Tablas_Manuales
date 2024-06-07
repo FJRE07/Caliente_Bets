@@ -1,0 +1,103 @@
+## Tabla mst_datos_basicos_cliente ##
+
+Esta consulta crea una nueva tabla que contiene información básica del cliente, tomando solo la fila más reciente para cada cliente. La tabla deberá ser actualizada cada mes para acceder a los ingresados en el mes de observación
+
+'''
+CREATE TABLE sb_gf.mst_datos_basicos_cliente AS 
+SELECT 
+    cve_cliente, 
+    cve_suc_administradora, 
+    fec_nacimiento,
+    cve_estado_civil
+FROM (
+    SELECT 
+        cve_cliente, 
+        cve_suc_administradora, 
+        fec_nacimiento,
+        cve_estado_civil,
+        ROW_NUMBER() OVER (PARTITION BY cve_cliente ORDER BY fec_particion_datos DESC) AS rn
+    FROM af_personas_altair.mst_datos_basicos_cliente
+) AS sub
+WHERE rn = 1
+'''
+
+### Tablas v_ind_gestion_part_dl_simplai & v_ind_gestion_bpriv_dl_simplai ###
+
+Creación inicial de la tablas
+
+'''
+CREATE TABLE sb_gf.v_ind_gestion_part_dl_simplai AS
+SELECT 
+	id_mes,
+	id_cliente,
+	'PARTICULARES' as segmento,
+	id_vinculado,
+	id_loyal,
+	des_segmento_esp,
+	CASE 
+		WHEN des_segmento_esp = 'CLASICO' THEN 'CLASICO'
+		WHEN des_segmento_esp = 'PREFERENTE' THEN 'PREFERENTE'
+		WHEN des_segmento_esp IN ('SELECT','SELECT EMPRESARIAL','MUNDO SELECT BLACK','MUNDO SELECT','BLACK') THEN 'RRAA' 
+		ELSE 'OTROS'
+	END AS modelo_atencion,
+	id_activo
+FROM af_macrobase_hist.v_ind_gestion_part_dl
+
+CREATE TABLE sb_gf.v_ind_gestion_part_dl_simplai AS
+SELECT 
+	id_mes,
+	id_cliente,
+	'PARTICULARES' as segmento,
+	id_vinculado,
+	id_loyal,
+	des_segmento_esp,
+	CASE 
+		WHEN des_segmento_esp = 'CLASICO' THEN 'CLASICO'
+		WHEN des_segmento_esp = 'PREFERENTE' THEN 'PREFERENTE'
+		WHEN des_segmento_esp IN ('SELECT','SELECT EMPRESARIAL','MUNDO SELECT BLACK','MUNDO SELECT','BLACK') THEN 'RRAA' 
+		ELSE 'OTROS'
+	END AS modelo_atencion,
+	id_activo
+FROM af_macrobase_hist.v_ind_gestion_part_dl
+
+'''
+
+'''
+
+INSERT INTO TABLE sb_gf.v_ind_gestion_part_dl_simplai
+SELECT 
+	id_mes,
+	id_cliente,
+	'PARTICULARES' as segmento,
+	id_vinculado,
+	id_loyal,
+	des_segmento_esp,
+	CASE 
+		WHEN des_segmento_esp = 'CLASICO' THEN 'CLASICO'
+		WHEN des_segmento_esp = 'PREFERENTE' THEN 'PREFERENTE'
+		WHEN des_segmento_esp IN ('SELECT','SELECT EMPRESARIAL','MUNDO SELECT BLACK','MUNDO SELECT','BLACK') THEN 'RRAA' 
+		ELSE 'OTROS'
+	END AS modelo_atencion,
+	id_activo
+FROM af_macrobase_hist.v_ind_gestion_part_dl
+WHERE id_mes ={mes deseado:p.e. "202404" es decir abril de 2024 }
+
+CREATE TABLE sb_gf.v_ind_gestion_part_dl_simplai AS
+SELECT 
+	id_mes,
+	id_cliente,
+	'PARTICULARES' as segmento,
+	id_vinculado,
+	id_loyal,
+	des_segmento_esp,
+	CASE 
+		WHEN des_segmento_esp = 'CLASICO' THEN 'CLASICO'
+		WHEN des_segmento_esp = 'PREFERENTE' THEN 'PREFERENTE'
+		WHEN des_segmento_esp IN ('SELECT','SELECT EMPRESARIAL','MUNDO SELECT BLACK','MUNDO SELECT','BLACK') THEN 'RRAA' 
+		ELSE 'OTROS'
+	END AS modelo_atencion,
+	id_activo
+FROM af_macrobase_hist.v_ind_gestion_part_dl
+WHERE id_mes ={mes deseado:p.e. "202404" es decir abril de 2024 }
+
+'''
