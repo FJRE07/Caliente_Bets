@@ -1,0 +1,81 @@
+"metric","train","dataset"
+True positive,2930926.0,Train
+True negative,37173794,Train
+False positive,1502892.0,Train
+False negative,9179690.0,Train
+Recall,0.2420129578875261,Train
+Precision,0.6610388608643837,Train
+AUC,0.7480720481914059,Train
+AU Precision Recall,0.5165183294607926,Train
+True positive,731915.0,Test
+True negative,9292581.0,Test
+False positive,375942.0,Test
+False negative,2296163.0,Test
+Recall,0.24170942756428335,Test
+Precision,0.6606583701687131,Test
+AUC,0.7476800937533756,Test
+AU Precision Recall,0.516012445368498,Test
+True positive,1243097.0,Train_1
+True negative,17373479,Train_1
+False positive,717045.0,Train_1
+False negative,4286140.0,Train_1
+Recall,0.22482252072030914,Train_1
+Precision,0.6341872170485607,Train_1
+AUC,0.7377395326036345,Train_1
+AU Precision Recall,0.48966935694320557,Train_1
+True positive,311221.0,Test_1
+True negative,4343957.0,Test_1
+False positive,179439.0,Test_1
+False negative,1072864.0,Test_1
+Recall,0.22485685488969248,Test_1
+Precision,0.6342905474259161,Test_1
+AUC,0.737691335637233,Test_1
+AU Precision Recall,0.49003157473363285,Test_1
+True positive,1532289.0,Train_2
+True negative,16436644,Train_2
+False positive,679236.0,Train_2
+False negative,4160116.0,Train_2
+Recall,0.2691813038601435,Train_2
+Precision,0.6928653304846203,Train_2
+AUC,0.7621839199452211,Train_2
+AU Precision Recall,0.5538269392005996,Train_2
+True positive,381840.0,Test_2
+True negative,4110124.0,Test_2
+False positive,169887.0,Test_2
+False negative,1040288.0,Test_2
+Recall,0.26849903806127157,Test_2
+Precision,0.6920814098276865,Test_2
+AUC,0.761538546702747,Test_2
+AU Precision Recall,0.5526833730014198,Test_2
+True positive,153380.0,Train_3
+True negative,3326111.0,Train_3
+False positive,104635.0,Train_3
+False negative,725480.0,Train_3
+Recall,0.1745215392667774,Train_3
+Precision,0.5944615623122687,Train_3
+AUC,0.7200267839056818,Train_3
+AU Precision Recall,0.4240518001074678,Train_3
+True positive,38301.0,Test_3
+True negative,829249.0,Test_3
+False positive,26121.0,Test_3
+False negative,181048.0,Test_3
+Recall,0.17461214776452139,Test_3
+Precision,0.5945329235354382,Test_3
+AUC,0.7191307892223587,Test_3
+AU Precision Recall,0.4229512142177477,Test_3
+True positive,2160.0,Train_4
+True negative,37560.0,Train_4
+False positive,1976.0,Train_4
+False negative,7954.0,Train_4
+Recall,0.21356535495352977,Train_4
+Precision,0.5222437137330754,Train_4
+AUC,0.7027428780438015,Train_4
+AU Precision Recall,0.3999695348515333,Train_4
+True positive,553.0,Test_4
+True negative,9251.0,Test_4
+False positive,495.0,Test_4
+False negative,1963.0,Test_4
+Recall,0.2197933227344992,Test_4
+Precision,0.5276717557251909,Test_4
+AUC,0.7032552305507415,Test_4
+AU Precision Recall,0.4016938902514529,Test_4
